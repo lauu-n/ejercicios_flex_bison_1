@@ -61,5 +61,6 @@ El especificador %#x agrega automáticamente el prefijo 0x al número hexadecima
 
 ### Resultados
 
-![resultado](image.png)
+<img width="817" height="372" alt="image" src="https://github.com/user-attachments/assets/247e0b48-e2f8-44de-a5a9-cb53f5697dc1" />
+
 
