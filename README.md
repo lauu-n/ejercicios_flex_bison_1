@@ -224,10 +224,15 @@ En lugar de utilizar Flex para generar automáticamente el scanner, el programa 
 Utiliza un switch para identificar operadores como:
 
 `+`
+
 `-`
+
 `*`
+
 `/`
+
 `|`
+
 
 También identifica:
 
