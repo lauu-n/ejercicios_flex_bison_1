@@ -560,3 +560,10 @@ pip3 install pandas matplotlib
 ```
 
 El script genera un archivo de prueba de 100MB, compila y corre ambas versiones (Flex y C), guarda los resultados en `resultados.csv`, y abre automáticamente `grafica.png` con la comparación de tiempo y memoria.
+
+---
+
+#### Integrantes
+- David Avendaño
+- Laura Niño
+- Brayan Paredes
