@@ -52,7 +52,7 @@ yylex(void)
 
 Will the calculator accept a line that contains only a comment? Why not? Would it be easier to fix this in the scanner or in the parser?
 
-    - ¿Acepta el calculador una línea que solo tenga un comentario?
+- ¿Acepta el calculador una línea que solo tenga un comentario?
 
     El programa al enontrar *//* sabe que es un comentario y lee los caracteres hasta *\n*.
     Al encontrarlo solo hace *break* y continúa en el bucle *while(1)*, mas no regresa el token *EOL*.
@@ -60,6 +60,6 @@ Will the calculator accept a line that contains only a comment? Why not? Would i
     Entonces, sí acepta la línea, mas no la identifica, no hace nada con ella.
 
 
-    - ¿Se arregla más fácil en el escáner o el parser?
+- ¿Se arregla más fácil en el escáner o el parser?
 
     Es más sencillo arregarlo en el escáner, pues será más fácil detectar el comentario, en lugar del *break*, se devolvería el EOL (*(return EOL)* en lugar de *break*)
