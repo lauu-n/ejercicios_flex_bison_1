@@ -9,11 +9,17 @@ Su función es leer la entrada y reconocer los diferentes elementos de la calcul
 Reconoce:
 
 `+` → ADD
+
 `-` → SUB
+
 `*` → MUL
+
 `/` → DIV
+
 `&` → AND
+
 `|` → ABS
+
 números → NUMBER
 salto de línea → EOL
 espacios y tabulaciones → se ignoran
