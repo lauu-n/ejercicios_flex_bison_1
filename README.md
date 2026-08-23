@@ -36,11 +36,14 @@ Su función es definir cómo se combinan los tokens recibidos desde Flex y qué 
 
 Se agregaron las operaciones:
 
-AND mediante &
-OR mediante |
-Valor absoluto mediante | como operador unario
+- AND mediante `&`
 
-El problema principal del ejercicio es que el símbolo | tiene dos funciones.
+- OR mediante `|`
+
+- Valor absoluto mediante `|` como operador unario
+
+
+El problema principal del ejercicio es que el símbolo `|` tiene dos funciones.
 
 Por ejemplo:
 
@@ -140,13 +143,17 @@ Resultado:
 Esto ocurre porque:
 
 5 = 101
+
 3 = 011
 
 101
+
 011
 
 001 = 1
+
 Prueba OR
+
 5 | 3
 
 Resultado:
@@ -156,12 +163,15 @@ Resultado:
 Porque:
 
 5 = 101
+
 3 = 011
 
 101
+
 011
 
 111 = 7
+
 Prueba de valor absoluto
 |5
 
@@ -172,6 +182,7 @@ Resultado:
 Para terminar el programa se puede utilizar:
 
 Ctrl + D
+
 Análisis del ejercicio 3
 
 El objetivo del ejercicio es agregar operadores bit a bit AND y OR al calculador.
@@ -210,8 +221,9 @@ Por lo tanto, las operaciones agregadas funcionan correctamente.
 
 Para el ejercicio 4 se utilizaron dos implementaciones del scanner:
 
-Una versión escrita manualmente en C.
-Una versión creada mediante Flex.
+- Una versión escrita manualmente en C.
+
+- Una versión creada mediante Flex.
 
 Ambas siguen las reglas y tokens mostrados en el Example 1-4 del material.
 
@@ -237,21 +249,27 @@ Utiliza un switch para identificar operadores como:
 También identifica:
 
 números
+
 espacios
+
 tabulaciones
+
 saltos de línea
+
 
 Cuando encuentra un número de varios dígitos, va construyendo su valor numérico y lo almacena en yylval.
 
 Los tokens utilizan los mismos valores numéricos del Example 1-4:
 
-NUMBER = 258
-ADD    = 259
-SUB    = 260
-MUL    = 261
-DIV    = 262
-ABS    = 263
-EOL    = 264
+- NUMBER = 258
+- ADD    = 259
+- SUB    = 260
+- MUL    = 261
+- DIV    = 262
+- ABS    = 263
+- EOL    = 264
+
+
 Cómo compilar ejercicio4_manual.c
 
 Ejecutar:
@@ -274,21 +292,34 @@ a / 34 + |45
 La salida esperada es:
 
 Mystery character a
+
 262
+
 258 = 34
+
 259
+
 263
+
 258 = 45
+
 264
+
 
 Los números representan los tokens:
 
 262 → DIV
+
 258 → NUMBER
+
 259 → ADD
+
 263 → ABS
+
 258 → NUMBER
+
 264 → EOL
+
 
 El carácter a no pertenece a ninguno de los patrones reconocidos y por eso aparece como Mystery character.
 
@@ -302,14 +333,22 @@ Flex toma las expresiones regulares y las acciones definidas en este archivo y g
 
 Entre las reglas se encuentran:
 
-"+"      → ADD
-"-"      → SUB
-"*"      → MUL
-"/"      → DIV
-"|"      → ABS
-[0-9]+   → NUMBER
-\n       → EOL
-[ \t]    → ignorar espacios
+`"+"`      → ADD
+
+`"-"`      → SUB
+
+`"*"`      → MUL
+
+`"/"`      → DIV
+
+`"|"`      → ABS
+
+`[0-9]+`   → NUMBER
+
+`\n`       → EOL
+
+`[ \t]`    → ignorar espacios
+
 
 Cuando se reconoce un número, se utiliza atoi() para convertir el texto a un entero.
 
@@ -343,33 +382,57 @@ a / 34 + |45
 La salida esperada es:
 
 Mystery character a
+
 262
+
 258 = 34
+
 259
+
 263
+
 258 = 45
+
 264
+
 Comparación del ejercicio 4
+
 
 Se ejecutó la misma entrada en ambas versiones:
 
 a / 34 + |45
+
 Scanner manual
+
 Mystery character a
+
 262
+
 258 = 34
+
 259
+
 263
+
 258 = 45
+
 264
+
 Scanner generado con Flex
+
 Mystery character a
 262
+
 258 = 34
+
 259
+
 263
+
 258 = 45
+
 264
+
 
 Los resultados son iguales.
 
@@ -396,11 +459,17 @@ a / 34 + |45
 Ambos scanners reconocieron:
 
 DIV
+
 NUMBER
+
 ADD
+
 ABS
+
 NUMBER
+
 EOL
+
 
 y ambos trataron a como un carácter desconocido.
 
@@ -408,8 +477,7 @@ Por lo tanto, para las reglas utilizadas en el Example 1-4, ambas implementacion
 
 La principal diferencia es la implementación: la versión manual analiza los caracteres directamente mediante código C, mientras que Flex genera automáticamente el scanner a partir de las expresiones regulares.
 
-
-
+---
 
 ## Ejercicio 5
 
