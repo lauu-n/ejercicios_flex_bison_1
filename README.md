@@ -1,5 +1,23 @@
-# ejercicios_flex_bison_1
+# EJERCICIOS FLEX BISON 1
+
+---
+
+## Ejercicio 1
+
+La solución se encuentra en el archivo [ejercicio_1.md]([https://google.com](https://github.com/lauu-n/ejercicios_flex_bison_1/blob/main/ejercicio_1.md))
+
+---
+
+## Ejercicio 2
+
+Generar una calculadora que reciba números en hexa y decimal.
+
+La solución de este ejercicio se encuentra en la carpeta [`2`](./2).
+
+---
+
 ## Ejercicio 3
+
 - ejercicio3.l
 
 Es el archivo del scanner de Flex.
