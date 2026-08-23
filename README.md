@@ -4,7 +4,7 @@
 
 ## Ejercicio 1
 
-La solución se encuentra en el archivo [`ejercicio_1.md`](./ejercicio_1)
+La solución se encuentra en el archivo [`ejercicio_1.md`](https://github.com/lauu-n/ejercicios_flex_bison_1/blob/main/ejercicio_1.md)
 
 ---
 
