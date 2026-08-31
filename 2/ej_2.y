@@ -3,8 +3,7 @@
  * ej_2.y
  *
  * Gramática (bison) para la calculadora del libro "flex & bison".
- * Ejercicio 2 del capítulo 1: el resultado se imprime en decimal
- * y en hexadecimal.
+ * Ejercicio 2 del capítulo 1: el resultado se imprime en hexadecimal.
  */
 #include <stdio.h>
 
@@ -20,10 +19,9 @@ void yyerror(char *);
 /* Una lista de líneas, cada una con una expresión o vacía */
 calclist: /* vacío */
         | calclist exp EOL {
-              /* Aquí está el cambio del ejercicio 2:
-               * se imprime el resultado en decimal (%d)
-               * y en hexadecimal (%#x -> agrega el prefijo 0x) */
-              printf("= %d (%#x)\n", $2, $2);
+              /* Se imprime el resultado en hexadecimal (%#x agrega
+               * el prefijo 0x) */
+              printf("= %#x\n", $2);
           }
         | calclist EOL   /* línea vacía, no hace nada */
         ;
@@ -55,3 +53,4 @@ void yyerror(char *s)
 {
     fprintf(stderr, "%s\n", s);
 }
+
