@@ -1,3 +1,4 @@
+```c
 %{
 /*
  * ej_2.l
@@ -36,6 +37,12 @@ void yyerror(char *);
                       return NUMBER;
                    }
 
+"a"                {
+                      /* La letra 'a' representa el valor 61 */
+                      yylval = 61;
+                      return NUMBER;
+                   }
+
 \n                 { return EOL; }
 
 [ \t]              { /* ignorar espacios y tabs */ }
@@ -43,3 +50,4 @@ void yyerror(char *);
 .                  { yyerror("carácter desconocido"); }
 
 %%
+```
